@@ -21,6 +21,7 @@ window.onload = function(){
         var response = httpRequest.responseText;
         var demo = document.querySelector('#demo');
         demo.innerHTML = response;
+        console.log(response);
       } else {
         alert('There was a problem with the request.');
       }
