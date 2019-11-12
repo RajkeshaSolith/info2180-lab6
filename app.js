@@ -9,7 +9,7 @@ window.onload = function(){
     httpRequest = new XMLHttpRequest();
 
     // GET Request
-    var url = "superheroes.php";
+    var url = "http://localhost:8080/superheroes.php";
     httpRequest.onreadystatechange = loadSearch;
     httpRequest.open('GET', url);
     httpRequest.send();
@@ -19,8 +19,8 @@ window.onload = function(){
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         var response = httpRequest.responseText;
-        var demo = document.querySelector('#demo');
-        demo.innerHTML = response;
+        var gotit = document.querySelector('#demo');
+        gotit.innerHTML = response;
         console.log(response);
       } else {
         alert('There was a problem with the request.');
